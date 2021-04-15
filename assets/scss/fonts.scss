@@ -1,0 +1,14 @@
+@mixin newFont($family, $pathName) {
+  @font-face {
+    font-family: "#{$family}";
+    src: url("~assets/fonts/#{$pathName}.woff2") format("woff2"),
+      url("~assets/fonts/#{$pathName}.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include newFont("light", "GTWalsheimPro-Light");
+@include newFont("reg", "GTWalsheimPro-Regular");
+@include newFont("number", "cimeropro-webfont");
+
