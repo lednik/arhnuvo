@@ -1,3 +1,88 @@
-.div {
-    color: $white;
+.drum {
+    width: fit-content;
+    overflow: hidden;
+    cursor: pointer;
+
+    &_small {
+        height: vw(35);
+
+        & .drum__text {
+            padding: vw(6) vw(32) vw(8);
+            font-size: vw(18);
+            line-height: vw(21);
+        }
+
+        &:hover {
+            & .drum__wrapper {
+                transform: translateY(vw(-35));
+            }
+        }
+    }
+
+    &_large {
+        height: vw(104);
+
+        & .drum__text {
+            font-size: vw(80);
+            line-height: 130%;
+        }
+
+        &:hover {
+            & .drum__wrapper {
+                transform: translateY(vw(-104));
+            }
+        }
+    }
+
+    &_action {
+        height: 54px;
+
+        & .drum__text {
+            font-size: 18px;
+            line-height: 21px;
+            padding: 16px 55px 17px;
+        }
+
+        &:hover {
+            & .drum__wrapper {
+                transform: translateY(-54px);
+            }
+        }
+    }
+
+    &_border {
+        border: 1px solid $grey;
+        height: vw(54);
+
+        & .drum__text {
+            padding: vw(15) vw(24);
+            font-size: vw(16);
+            line-height: 150%;
+        }
+
+        &:hover {
+            & .drum__wrapper {
+                transform: translateY(vw(-54));
+            }
+        }
+    }
+
+    &__wrapper {
+        transition-duration: .3s;
+        transition-timing-function: ease-in-out;
+    }
+
+    &_white {
+        & .drum__text {
+            color: $dark;
+            background-color: $white;
+        }
+    }
+
+    &_dark {
+        & .drum__text {
+            color: $white;
+            background-color: $dark;
+        }
+    }
 }

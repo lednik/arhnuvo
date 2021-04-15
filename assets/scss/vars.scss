@@ -1,8 +1,17 @@
 // COLORS
-$text: #1f1f1f;
+$dark: #1f1f1f;
 $white: #fff;
 $grey: #999999;
 
-// FONTS
-$reg: 'reg', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif';
-$number: 'number', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif';
+$window-width: 1920;
+
+@function vw($pixels, $window-width: $window-width) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($window-width)){
+        $window-width: $window-width * 1px;
+    }
+        
+    @return ($pixels* 100) / $window-width * 1vw;
+}

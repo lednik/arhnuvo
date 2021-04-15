@@ -1,0 +1,40 @@
+.contacts{
+    background-color: $dark;
+    padding: 100px 90px 128px;
+}
+
+.form {
+    color: $grey;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 150%;
+        margin-bottom: 20px;
+    }
+
+    &__budgets {
+        display: flex;
+    }
+
+    &__budget:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.input {
+    width: 470px;
+    padding: vw(15) vw(24);
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: unset;
+    border: 1px solid $grey;
+    color: $white;
+}

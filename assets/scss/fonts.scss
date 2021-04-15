@@ -12,3 +12,6 @@
 @include newFont("reg", "GTWalsheimPro-Regular");
 @include newFont("number", "cimeropro-webfont");
 
+// FONTS
+$reg: 'reg', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif';
+$number: 'number', -apple-system, system-ui, blinkmacsystemfont, 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif';

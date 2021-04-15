@@ -1,19 +1,17 @@
 <template>
-  <div class="drum" :class="`drum_${type}`">
+  <div class="drum" :class="`drum_${type} drum_${background}`">
     <div class="drum__wrapper">
       <div class="drum__text drum__top">
-        text
+        {{ title }}
       </div>
       <div class="drum__text drum__bottom">
-        text
+        {{ title }}
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import { defineComponent } from '@vue/composition-api'
-
 export default {
   props: {
     title: {
@@ -21,33 +19,18 @@ export default {
       required: true
     },
     type: {
+      // small/border/large/action
       type: String,
       required: false,
       default: 'small'
+    },
+    background: {
+      // dark/white
+      type: String,
+      required: false,
+      default: 'dark'
     }
   }
-  // setup () {
-
-  // },
-  // data () {
-  //   return {
-  //   }
-  // },
-  // computed () {
-
-  // },
-  // watch: {
-
-  // },
-  // mounted () {
-
-  // },
-  // created () {
-
-  // },
-  // methods: {
-
-  // }
 }
 </script>
 
