@@ -1,0 +1,55 @@
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 265px 90px 0;
+    color: $white;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__title {
+        font-size: 80px;
+        line-height: 130%;
+        letter-spacing: 0.04em;
+        margin-bottom: 60px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 30px;
+        line-height: 180%;
+    }
+
+    &__subtitle {
+        font-family: $light;
+    }
+
+    &__value {
+        font-family: $light;
+        color: $grey;
+        margin-left: 9px;
+    }
+
+    &__line {
+        width: 310px;
+        height: 1px;
+        background-color: $grey;
+    }
+}

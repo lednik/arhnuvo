@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="menu">
     4
   </div>
 </template>
@@ -21,7 +21,7 @@ export default defineComponent({
     return {
     }
   },
-  computed () {
+  computed: {
 
   },
   watch: {

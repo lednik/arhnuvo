@@ -1,5 +1,8 @@
 <template>
   <div class="contacts">
+    <div class="contacts__title">
+      {{ title }}
+    </div>
     <div class="form">
       <div class="form__block">
         <div class="form__title">
@@ -34,6 +37,12 @@ export default defineComponent({
   components: {
     'drum-cmp': Drum
   },
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  },
   setup () {},
   async asyncData ({ $http }) {
     const test = await $http.$get('/api/test')
@@ -59,7 +68,7 @@ export default defineComponent({
       ]
     }
   },
-  computed () {},
+  computed: {},
   watch: {},
   mounted () {},
   created () {},

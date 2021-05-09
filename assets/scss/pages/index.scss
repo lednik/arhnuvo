@@ -1,0 +1,128 @@
+.main {
+    margin-top: 265px;
+
+    &__title {
+        font-size: vw(80);
+        line-height: 130%;
+        letter-spacing: 0.04em;
+        margin-bottom: vw(80);
+    }
+
+    &__text {
+        font-family: $light;
+        font-size: vw(30);
+        line-height: vw(50);
+    }
+
+    &-top {
+        padding-left: vw(90);
+        margin-bottom: vw(344);
+
+        &__title {
+            max-width: 1020px;
+        }
+
+        &__text {
+            max-width: vw(860);
+            margin-bottom: vw(60);
+        }
+    }
+
+    &-center {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-bottom: vw(230);
+
+        &__right {
+            max-width: vw(1590);
+        }
+
+        &__picture {
+            position: relative;
+            margin-bottom: vw(230);
+        }
+
+        &__image {
+            position: relative;
+            z-index: 10;
+        }
+
+        &__box {
+            position: absolute;
+            right: 0;
+            top: vw(-110);
+            width: vw(874);
+            height: vw(150);
+            background-color: $dark;
+        }
+
+        &__title {
+            max-width: vw(1100);
+        }
+
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-right: vw(90);
+        }
+
+        &__text {
+            max-width: vw(700);
+        }
+    }
+
+    &-projects {
+        margin-bottom: vw(230);
+        display: flex;
+        flex-direction: column;
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: vw(80);
+        }
+
+        &__project {
+            width: vw(614);
+            height: vw(480);
+            overflow: hidden;
+            margin-bottom: vw(30);
+
+            &:hover {
+                .main-projects__image {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        &__image {
+            object-fit: cover;
+            height: 100%;
+            transition: 10s;
+        }
+
+        &__link {
+            display: inline-block;
+            align-self: center;
+        }
+    }
+
+    &-bottom {
+        margin-bottom: vw(230);
+
+        &__info {
+            margin-left: vw(90);
+        }
+
+        &__text {
+            max-width: vw(770);
+            margin-bottom: vw(230);
+        }
+
+        &__image {
+            max-width: vw(1590);
+        }
+    }
+}

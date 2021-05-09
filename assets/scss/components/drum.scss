@@ -3,6 +3,10 @@
     overflow: hidden;
     cursor: pointer;
 
+    &__text {
+        transition: 0.3s;
+    }
+
     &_small {
         height: vw(35);
 

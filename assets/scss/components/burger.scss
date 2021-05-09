@@ -1,0 +1,51 @@
+.burger {
+    position: relative;
+    width: 30px;
+    height: 14px;
+    cursor: pointer;
+
+    &__line {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $dark;
+        transition: top 0.2s ease-in-out 0.2s, bottom 0.2s ease-in-out 0.2s, transform .2s ease-in-out, opacity 0s ease-in-out .2s, background-color 0.3s ease-in-out 0s
+    }
+
+    &__top {
+        top: 0;
+    }
+
+    &__center {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__bottom {
+        bottom: 0;
+    }
+
+    &_active {
+        .burger {
+            &__line {
+                background-color: $white;
+                transition: top 0.2s ease-in-out, bottom 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s, opacity 0s ease-in-out .2s, background-color 0.3s ease-in-out 0s;
+            }
+
+            &__top {
+                top: calc(50% - 1px);
+                transform: rotate(45deg);
+            }
+
+            &__bottom {
+                bottom: calc(50% - 1px);
+                transform: rotate(-45deg);
+            }
+
+            &__center {
+                opacity: 0;
+            }
+        }
+    }
+}
