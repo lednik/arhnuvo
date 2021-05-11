@@ -45,4 +45,18 @@
     background-color: unset;
     border: 1px solid $grey;
     color: $white;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__error {
+        position: absolute;
+        top: 0;
+        left: 28px;
+        transform: translateY(-50%);
+        color: #D02B2B;
+        padding: 0 8px;
+        background-color: $dark;
+    }
 }

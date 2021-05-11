@@ -27,7 +27,7 @@ export default {
   */
   css: [
     {
-      src: '~assets/scss/main.scss',
+      src: '@assets/scss/main.scss',
       lang: 'scss'
     }
   ],
@@ -46,6 +46,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '@plugins/v-mask.js'
   ],
 
   /*

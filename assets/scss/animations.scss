@@ -1,3 +1,4 @@
+// появление меню
 .menu-enter-active, .menu-leave-active {
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
@@ -5,7 +6,7 @@
 .menu-enter, .menu-leave-to {
     transform: translateX(100%);
 }
-
+// появление справа налево
 .right-enter-active, .right-leave-active {
     position: static;
     transition-duration: 0.4s;
@@ -13,5 +14,13 @@
 }
 .right-enter, .right-leave-to {
     transform: translateX(40px);
+    opacity: 0;
+}
+// появление из невидимости
+.fade-enter-active, .fade-leave-active {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.fade-enter, .fade-leave-to {
     opacity: 0;
 }

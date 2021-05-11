@@ -12,8 +12,10 @@
   },
   "dependencies": {
     "@nuxt/http": "latest",
+    "@vue/composition-api": "^1.0.0-rc.8",
     "express": "latest",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "v-mask": "^2.2.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",
@@ -22,7 +24,9 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.20.0",
     "eslint-plugin-nuxt": "^2.0.0",
+    "fibers": "^5.0.0",
     "node-sass": "^4.12.0",
-    "sass-loader": "^7.2.0"
+    "sass": "^1.32.12",
+    "sass-loader": "^7.3.1"
   }
 }
