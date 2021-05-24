@@ -1,7 +1,9 @@
 <template>
   <div>
     <header-cmp />
-    <Nuxt />
+    <transition name="page">
+      <Nuxt />
+    </transition>
   </div>
 </template>
 

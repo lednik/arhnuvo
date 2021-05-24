@@ -36,9 +36,9 @@
           <img class="main-projects__image" :src="item.img" alt="project image">
         </a>
       </div>
-      <a href="/projects" class="main-projects__link">
+      <nuxt-link :to="{ name: 'projects'}" class="main-projects__link">
         <arrow-button-cmp title="больше проектов" />
-      </a>
+      </nuxt-link>
     </div>
     <div class="main-bottom">
       <div class="main-bottom__info">
@@ -65,12 +65,12 @@ export default {
     'arrow-button-cmp': ArrowButton,
     'contacts-cmp': Contacts
   },
-  async asyncData ({ $http }) {
-    const test = await $http.$get('/api/test')
-    return {
-      test
-    }
-  },
+  // async asyncData ({ $http }) {
+  //   const test = await $http.$get('/api/test')
+  //   return {
+  //     test
+  //   }
+  // },
   data () {
     return {
       projects: [

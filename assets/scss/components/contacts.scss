@@ -1,6 +1,6 @@
 .contacts{
     background-color: $dark;
-    padding: 100px 90px 128px;
+    padding: vw(100) vw(90) vw(128);
 
     &__title {
         font-family: $light;
@@ -9,38 +9,91 @@
         line-height: 150%;
         margin-bottom: vw(50);
     }
+
+    &__row {
+        display: flex;
+    }
+
+    &__line {
+        width: 1px;
+        height: vw(480);
+        background-color: $grey;
+        margin-right: vw(111);
+        transform: translateY(vw(-60));
+    }
+
+    &-info {
+        &__title {
+            font-size: vw(20);
+            line-height: 150%;
+            color: #999999;
+            margin-bottom: vw(20);
+        }
+
+        &__item {
+            display: flex;
+            font-size: vw(20);
+            line-height: 180%;
+            color: $white;
+        }
+
+        &__subtitle {
+            margin-right: vw(9);
+        }
+
+        &__value {
+            color: $grey;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        font-size: vw(20);
+        line-height: 150%;
+        color: #999999;
+    }
 }
 
 .form {
     color: $grey;
+    margin-right: vw(111);
+
+    &__row {
+        display: flex;
+    }
 
     &__block {
         display: flex;
         flex-direction: column;
-        margin-bottom: 60px;
+        margin-bottom: vw(60);
+
+        &:first-child {
+            margin-right: vw(60);
+        }
     }
 
     &__title {
-        font-size: 20px;
+        font-size: vw(20);
         line-height: 150%;
-        margin-bottom: 20px;
+        margin-bottom: vw(20);
     }
 
     &__budgets {
-        display: flex;
+        // display: flex;
     }
 
     &__budget:not(:last-child) {
-        margin-right: 20px;
+        margin-bottom: vw(20);
     }
 }
 
 .input {
-    width: 470px;
+    width: vw(470);
     padding: vw(15) vw(24);
-    font-size: 16px;
+    font-size: vw(16);
     line-height: 150%;
-    margin-bottom: 20px;
+    margin-bottom: vw(20);
     outline: none;
     background-color: unset;
     border: 1px solid $grey;
@@ -53,10 +106,32 @@
     &__error {
         position: absolute;
         top: 0;
-        left: 28px;
+        left: vw(28);
         transform: translateY(-50%);
         color: #D02B2B;
-        padding: 0 8px;
+        padding: 0 vw(8);
         background-color: $dark;
+    }
+}
+
+.dev {
+    display: flex;
+
+    &__item {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-right: vw(24);
+        }
+    }
+
+    &__subtitle {
+        margin-right: vw(12);
+        margin-top: vw(2);
+    }
+
+    &__value {
+        line-height: 180%;
+        border-bottom: 1px solid $grey;
     }
 }

@@ -3,85 +3,141 @@
     <div class="contacts__title">
       {{ title }}
     </div>
-    <div class="form">
-      <div class="form__block">
-        <div class="form__title">
-          Ваши данные
-        </div>
-        <div class="input__wrapper">
-          <transition name="fade">
-            <div v-if="form.name.error" class="input__error">
-              Неверное имя
+    <div class="contacts__row">
+      <div class="form">
+        <div class="form__row">
+          <div class="form__block">
+            <div class="form__title">
+              Ваши данные
             </div>
-          </transition>
-          <input
-            v-model="form.name.value"
-            type="text"
-            class="input"
-            placeholder="Ваше имя"
-            :class="{'t-input__error' : form.name.error}"
-            @input="form.name.error = false"
-          >
-        </div>
-        <div class="input__wrapper">
-          <transition name="fade">
-            <div v-if="form.email.error" class="input__error">
-              Неверный e-mail
+            <div class="input__wrapper">
+              <transition name="fade">
+                <div v-if="form.name.error" class="input__error">
+                  Неверное имя
+                </div>
+              </transition>
+              <input
+                v-model="form.name.value"
+                type="text"
+                class="input"
+                placeholder="Ваше имя"
+                :class="{'t-input__error' : form.name.error}"
+                @input="form.name.error = false"
+              >
             </div>
-          </transition>
-          <input
-            v-model="form.email.value"
-            type="text"
-            class="input"
-            placeholder="Ваш e-mail"
-            :class="{'t-input__error' : form.email.error}"
-            @input="form.email.error = false"
-          >
-        </div>
-        <div class="input__wrapper">
-          <transition name="fade">
-            <div v-if="form.phone.error" class="input__error">
-              Неверный номер
+            <div class="input__wrapper">
+              <transition name="fade">
+                <div v-if="form.email.error" class="input__error">
+                  Неверный e-mail
+                </div>
+              </transition>
+              <input
+                v-model="form.email.value"
+                type="text"
+                class="input"
+                placeholder="Ваш e-mail"
+                :class="{'t-input__error' : form.email.error}"
+                @input="form.email.error = false"
+              >
             </div>
-          </transition>
-          <input
-            v-model="form.phone.value"
-            v-mask="'+# (###) ### ## ##'"
-            type="text"
-            class="input"
-            placeholder="+7 (___) ___ __ __"
-            :class="{'t-input__error' : form.phone.error}"
-            @input="form.phone.error = false"
-          >
-        </div>
-      </div>
-      <div class="form__block">
-        <div class="form__title">
-          Ваш бюджет
-        </div>
-        <div class="form__budgets">
-          <div
-            v-for="(item,index) in budgets"
-            :key="`budget-${index}`"
-            class="form__budget"
-            @click="form.budget.value = item.name"
-          >
-            <drum-cmp
-              :title="item.name"
-              type="border"
-              class="form__budget"
-              :background="budgetBackground(item.name)"
-              :class="{'drum_white' : form.budget.value == item.name}"
-            />
+            <div class="input__wrapper">
+              <transition name="fade">
+                <div v-if="form.phone.error" class="input__error">
+                  Неверный номер
+                </div>
+              </transition>
+              <input
+                v-model="form.phone.value"
+                v-mask="'+# (###) ### ## ##'"
+                type="text"
+                class="input"
+                placeholder="+7 (___) ___ __ __"
+                :class="{'t-input__error' : form.phone.error}"
+                @input="form.phone.error = false"
+              >
+            </div>
+          </div>
+          <div class="form__block">
+            <div class="form__title">
+              Ваш бюджет
+            </div>
+            <div class="form__budgets">
+              <div
+                v-for="(item,index) in budgets"
+                :key="`budget-${index}`"
+                class="form__budget"
+                @click="form.budget.value = item.name"
+              >
+                <drum-cmp
+                  :title="item.name"
+                  type="border"
+                  class="form__budget"
+                  :background="budgetBackground(item.name)"
+                  :class="{'drum_white' : form.budget.value == item.name}"
+                />
+              </div>
+            </div>
           </div>
         </div>
+
+        <div class="form__button" @click="validForm">
+          <drum-cmp
+            title="отправить"
+            type="action"
+            background="white"
+          />
+        </div>
       </div>
-      <div class="form__button" @click="validForm">
-        <drum-cmp
-          title="отправить"
-          type="action"
-          background="white"
-        />
+      <div class="contacts__line" />
+      <div class="contacts-info">
+        <h1 class="contacts-info__title">
+          Контакты
+        </h1>
+        <div class="contacts-info__item">
+          <div class="contacts-info__subtitle">
+            Томск, Россия, 634050, пр. Ленина, д. 85, 2 этаж
+          </div>
+        </div>
+        <div class="contacts-info__item">
+          <div class="contacts-info__subtitle">
+            Телефон:
+          </div>
+          <a href="tel:+79913917892" class="contacts-info__value">
+            +7 991 391 78 92
+          </a>
+        </div>
+        <div class="contacts-info__item">
+          <div class="contacts-info__subtitle">
+            E-mail:
+          </div>
+          <a href="mailto:dogovor3@archnuvo.ru" class="contacts-info__value">
+            dogovor3@archnuvo.ru
+          </a>
+        </div>
+        <div class="contacts-info__line" />
+      </div>
+    </div>
+    <div class="contacts__bottom">
+      <p class="contacts__company">
+        Vasiliyrybakov ©2021
+      </p>
+      <div class="dev">
+        <div class="dev__item">
+          <p class="dev__subtitle">
+            Разработка сайта:
+          </p>
+          <p class="dev__value">
+            Nikolay Ledengskiy
+          </p>
+        </div>
+        <div class="dev__item">
+          <p class="dev__subtitle">
+            Дизайн сайта:
+          </p>
+          <p class="dev__value">
+            Vladislav Starostenko
+          </p>
+        </div>
       </div>
     </div>
   </div>

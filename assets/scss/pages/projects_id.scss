@@ -1,0 +1,70 @@
+.project {
+    margin-top: vw(137);
+
+    &__links {
+        display: flex;
+        margin-left: vw(90);
+        align-items: center;
+        margin-bottom: vw(70);
+    }
+
+    &__projects {
+        color: $dark;
+        font-size: vw(18);
+        line-height: vw(32);
+        letter-spacing: 0.05em;
+        text-decoration: underline;
+        margin-right: vw(20);
+        margin-bottom: vw(2);
+    }
+
+    &__short-name {
+        color: $dark;
+        font-size: vw(18);
+        line-height: vw(32);
+        letter-spacing: 0.05em;
+        margin-left: vw(12);
+    }
+
+    &__img {
+        width: 100vw;
+        height: auto;
+        margin-bottom: vw(230);
+    }
+
+    &__container {
+        margin: 0 vw(90) vw(230);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // &__info {
+    //     display: flex;
+    //     justify-content: space-between;
+    // }
+
+    &__name {
+        width: vw(620);
+        font-size: vw(60);
+        line-height: 130%;
+        letter-spacing: 0.04em;
+    }
+
+    &__text {
+        width: vw(782);
+        font-size: vw(24);
+        line-height: vw(32);
+    }
+
+    &__about {
+        font-size: vw(24);
+        line-height: vw(32);
+    }
+
+    &__creating {
+        width: vw(640);
+        font-size: vw(60);
+        line-height: 130%;
+        letter-spacing: 0.04em;
+    }
+}

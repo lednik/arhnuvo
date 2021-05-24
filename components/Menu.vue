@@ -2,8 +2,10 @@
   <div class="menu">
     <div class="menu__content">
       <transition name="right">
-        <div v-if="stage > 0" class="menu__title">
-          проекты
+        <div v-if="stage > 0" class="menu__title" @click="() => $emit('close-menu')">
+          <nuxt-link :to="{ name: 'projects'}">
+            проекты
+          </nuxt-link>
         </div>
       </transition>
       <div class="menu__info">

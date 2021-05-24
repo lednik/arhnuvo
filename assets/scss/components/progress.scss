@@ -1,0 +1,40 @@
+.progress {
+    position: fixed;
+    bottom: vw(94);
+    left: vw(90);
+
+    &__numbers {
+        margin-bottom: vw(10);
+    }
+
+    &__progress {
+        font-size: vw(40);
+        line-height: vw(40);
+        letter-spacing: 0.05em;
+        font-family: $number;
+    }
+
+    &__total {
+        font-size: vw(20);
+        line-height: vw(30);
+        letter-spacing: 0.05em;
+        color: $grey;
+        font-family: $number;
+    }
+
+    &__bar {
+        position: relative;
+        width: vw(190);
+        height: 2px;
+        background-color: $grey;
+    }
+
+    &__line {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $dark;
+        transition: .9s;
+    }
+}

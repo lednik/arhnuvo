@@ -20,7 +20,7 @@
         & .drum__text {
             padding: vw(6) vw(32) vw(8);
             font-size: vw(18);
-            line-height: vw(21);
+            line-height: vw(22);
         }
 
         &:hover {
@@ -46,17 +46,17 @@
     }
 
     &_action {
-        height: 54px;
+        height: vw(54);
 
         & .drum__text {
-            font-size: 18px;
-            line-height: 21px;
-            padding: 16px 55px 17px;
+            font-size: vw(18);
+            line-height: vw(21);
+            padding: vw(16) vw(55) vw(17);
         }
 
         &:hover {
             & .drum__wrapper {
-                transform: translateY(-54px);
+                transform: translateY(vw(-54));
             }
         }
     }
